@@ -1,0 +1,34 @@
+/*toys page*/
+h1{
+    font-style: oblique; 
+   color: rgb(255, 255, 255);
+   font-size: 80px;
+   background-color: rgb(197, 14, 14);
+   margin-top: 5px;
+   text-align: center;
+}
+/*خلفية الصفحة*/
+body{
+    background-image: url(2121.png);
+    background-attachment: fixed;
+}
+
+/*المسافات بين الصور*/
+img{
+    margin-left:15px;
+    margin-right:15px;
+    margin-bottom: 20px;
+}
+/*زر الاضافة للسلة*/
+input{
+    border: 5px solid rgb(226, 219, 219);
+    margin-top: 10px;
+    margin-bottom:10px;
+    background-color: rgb(0, 0, 0);
+    color: blue;
+    white-space: normal;
+    border-radius: 10px;
+    font-size:25px;
+    margin-left: 1px;
+}
+

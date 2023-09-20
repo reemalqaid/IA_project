@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>lisse World</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="imgs/logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+  
+  </head>
+  <body>
+   <header>
+			<div class="menu-bar">
+				<img src="imgs/logo.png" width="100px" height="100px" class="logo">
+				<ul>
+					<li><a href="index.html">Home</a>
+					            <div class="sub-menu-1">
+								</div>
+					</li>
+					<li><a href="health.html">Helth</a>
+					            <div class="sub-menu-1">
+									<ul>
+										<li><a href="bath.html">Bath</a></li>
+										<li><a href="food.html">Food</a></li>
+										</ul>
+								</div>
+					</li>
+					<li><a href="toys.html">Toys</a>
+					            <div class="sub-menu-1">
+									<ul>
+										<li><a href="books.html">Books</a></li>
+									</ul>
+								</div>          
+					</li>				
+					<li><a href="safty.html">Safty</a>
+								<div class="sub-menu-1">
+									<ul>
+										<li><a href="gear.html">Baby Gear</a></li>
+									</ul>
+								</div>          					
+					</li>				
+					<li><a href="clothes.html">Colthes</a>
+								<div class="sub-menu-1">
+									<ul>
+										<li><a href="shoes.html">Shoes</a></li>
+										<li><a href="gift.html">Gifts</a></li>
+									</ul>
+								</div>					
+					</li>				
+					<li><input type="search" placeholder="search"></li>
+					<li><a href="card.html"><img src="imgs/basket.png" height="30px"  width="30px"></a></li>
+					<li><a href="/" ><img src="imgs/user.png" height="30px" width="30px"> </a></li>
+				</ul>
+			</div>
+		</header>
+      
+        <h1 class="tit">Payment and Shipping</h1>
+        <form method="post" action="" class="payment-form">
+            <fieldset>
+ <legend>Delivery Information</legend>
+ <label for="fullName">Full Name:</label>
+<input typy="text" name="Full Name" required /><br> <br>
+
+<label for="email">Email:</label>
+<input typy="text" name="Email" required
+placeholder="exmapel@hotmal.com"/><br> 
+
+<label for="phonenumber">PhoneNumber:</label>
+<select>
+    <option>+966</option>
+    <option>+323</option>
+    <option>+976</option>
+    <option>+321</option> <br>
+</select>
+
+<input typy="number" name="PhoneNumber" required
+placeholder="Type without country code"/> <br>
+
+<label for="country">Country:</label>
+<select>
+    <option>SaudiArabia</option>
+  > <br>
+</select> <br>
+
+<label for="city">City:</label>
+<select  required>
+    <option>Riyadh </option>
+    <option>Abha</option>
+    <option>Khobar</option>
+    <option>Taif</option>
+    <option>Makkah </option>
+    <option>Jeddah </option>
+    <option>Al-`Ula</option>
+    <option>Hofuf </option>
+    <option>Buraydah </option>
+    <option>Jubail </option>
+    <br>
+</select> <br>
+
+<label for="Street name">Street name:</label>
+<input typy="text" name="Street name" /> <br>
+
+<label for="Street number">Street number:</label>
+<input typy="number" name="Street number" /> <br>
+
+<label for="Delivery way">Delivery way:</label> <br>
+<input type="radio" id="Home delivery" name="Delivery way" value="Home delivery" required>
+<label for="Home delivery">Home delivery</label><br> 
+<input type="radio" id="pickup from store" name="Delivery way" value="pickup from store"required>
+<label for="pickup from store">pickup from store</label><br>
+<br> 
+
+<label for="Shipping via">Shipping via:</label> <br>
+<input type="radio" id="DHL" name="Shipping via" value="DHL" required> <img src="imgs/DHL.png" width="80px"/>
+<input type="radio" id="ARAMEX" name="Shipping via" value="ARAMEX" required> <img src="imgs/amx.png" width="80px"/>
+<input type="radio" id="FEDEX" name="Shipping via" value="FEDEX" required> <img src="imgs/FedEx.jpg" width="80px"/>
+<br>
+            </fieldset><br>
+            
+<input type="submit" value="Save"> 
+<fieldset>
+    <legend>Payment Information </legend>
+    <label for="Payment Way">Payment Way:</label> <br>
+    <input type="radio" id="credit card" name="Payment Way" value="credit card" required> 
+    <img src="imgs/vsmm.png" width="80px"/>
+    <input type="radio" id="mada" name="Payment Way" value="mada" required>
+    <img src="imgs/mada.png" width="80px"/>
+    <input type="radio" id="stc" name="Payment Way" value="stc" required> 
+    <img src="imgs/stc.png" width="80px"/> <br>
+
+    <label for="Name on card">Name on card:</label>
+    <input typy="text" name="Name on card" /> <br>
+
+    <label for="Card number">Card number:</label>
+    <input typy="number" name="Card number" /> <br>
+
+    <label for="Expiration">Expiration:</label>
+    <select >
+        <option>2023</option>
+        <option>2024</option>
+        <option>2025</option>
+        <option>2026</option>
+        <option>2027</option>
+        <option>2028</option>
+        <option>2029</option>
+        <option>2030</option>
+        <br>
+    </select> 
+    <select >
+        <option>01</option>
+        <option>02</option>
+        <option>03</option>
+        <option>04</option>
+        <option>05</option>
+        <option>06</option>
+        <option>07</option>
+        <option>08</option> 
+        <option>09</option> 
+        <option>10</option> 
+        <option>11</option> 
+        <option>12</option>
+     
+    </select>  <br>
+    
+    <label for="Security Code">Security Code:</label>
+    <input  typy="code" maxlength="3" name="Security Code" placeholder="just 3 number" /> <br>
+</fieldset> 
+<input type="submit" value="Submit">
+    </form>
+
+<div class="total-price">
+               <p>  <b>Subtotal: </b> 
+                206.45 SAR </p>
+            
+                <p> <b>tax: </b>
+                 30.5</p>
+            
+               <p>  <b>total: </b>
+               236.50 SAR</p>
+    </div>
+       
+		<footer class="ab">
+			<p>contact with us</p>
+			<a href=""> <img src="imgs/s.png" width="20px" height="20px" ></a>
+			<a href="https://www.instagram.com/lisse.world/" target="_blank">  <img src="imgs/i.png" width="20px" height="20px" ></a>
+			<a href="https://twitter.com/lisseworld?s=11" target="_blank"><img src="imgs/t.png" width="20px" height="20px" ></a>
+            <a href=""> <img src="imgs/w.png" "20px" height="20px" ></a> <br />
+			<small> copyright &copy; lisseworld KSA 2021</small><br> <br />
+		</footer>
+
+</body>
+</html>
+

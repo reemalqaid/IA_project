@@ -1,0 +1,17 @@
+
+;(function(global){var q=csModule.q,wait={},modules={};global.csModule=function(){var args=arguments;if(typeof args[0]==='string'&&modules[args[0]]){console.error('duplicate module name "'+args[0]+'"');return;}
+var module={name:args[0],deps:args[1],callback:args[2],anon:false};if(args.length===2){if(Object.prototype.toString.call(args[0])==='[object Array]'&&typeof args[1]==='function'){module={name:(((1+Math.random())*0x10000)|0).toString(16).substring(1),deps:args[0],callback:args[1],anon:true};}else if(typeof args[0]==='string'&&typeof args[1]!=='undefined'){module.deps=[];module.callback=args[1];}}
+modules[module.name]=module;if(module.anon||wait[module.name]){initModule(module);}};function applyModule(module){if(module.anonApplyed){return false;}
+if(module.anon){module.anonApplyed=true;}
+var depObjs=[];if(!module.applys){if(module.deps.length){module.deps.forEach(function(depName){var dep=modules[depName];if(dep){depObjs.push(applyModule(dep));}});}
+var supPerformance=typeof performance==='object'&&performance&&performance.mark&&performance.measure;if(!module.anon&&supPerformance){performance.mark(module.name+':start');}
+try{module.applys=module.applys||(typeof module.callback==='function')?module.callback.apply(window,depObjs):module.callback;}catch(e){console.error(e);}
+if(!module.anon&&supPerformance){performance.mark(module.name+':end');performance.measure(module.name+':module',module.name+':start',module.name+':end');}}
+return module.applys;}
+function initModule(module){if(!module||module.inited)return;var initedDep=0;if(module.deps.length){module.deps.some(function(depName){var dep=modules[depName];if(dep&&dep.inited){initedDep++;}else{if(!wait[depName]){wait[depName]=[];}
+if(wait[depName].indexOf(module.name)===-1){wait[depName].push(module.name);}
+if(dep){initModule(dep);}
+return true;}});}
+if(initedDep===module.deps.length){if(module.anon){applyModule(module);delete modules[module.name];}else{module.inited=true;if(wait[module.name]){wait[module.name].forEach(function(moduleName){initModule(modules[moduleName])});delete wait[module.name];}}}}
+if(q.length){q.forEach(function(args){csModule.apply(global,args)});}
+q=null;})(window);

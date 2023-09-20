@@ -1,0 +1,921 @@
+
+*{
+  box-sizing:border-box;  
+}
+body{
+	background-color:#F8F3EF;
+	background-size:cover;
+	background-position:center;
+	font-family:sans-serif;
+    font-family:  'Dancing Script', cursive;
+}
+.menu-bar{
+	width:auto;
+	margin:auto;
+	display:flex;
+	align-items:center;
+	background-image: url(https://pbs.twimg.com/media/D8-vKkgUEAAMc90.jpg);
+	background-repeat: no-repeat;  
+	background-size: 100% 100%;
+	text-align:center;
+    
+}
+.menu-bar ul{
+ 	width:100%;
+  	display:inline-flex;
+  	list-style:none;
+  	color:#fff;
+}
+.menu-bar ul li{
+ 	margin: auto;/* يسير قد الصفحه لما اجي اصغر واكبر يصغر ويتكبر معاه*/
+	padding: auto;/* يسير قد الصفحه لما اجي اصغر واكبر يصغر ويتكبر معاه*/
+	display:inline-block;
+	position:relative;
+}
+.menu-bar ul li a{
+	padding: 10px 20px;
+	text-decoration:none;
+	color:#9A5F73;
+	font-size: 130%;
+}
+
+.menu-bar ul li a[href="#"]::after{
+	content:'';
+	height:3px;
+	width:0%;
+	background:#fff;
+	position:absolute;
+	left:0;
+	bottom:-10px;
+	transition:0.5s;
+}
+.menu-bar ul li a[href="#"]:hover::after{
+	width:100%;
+}
+.sub-menu-1{
+	display:none;
+}
+.menu-bar ul li:hover .sub-menu-1{
+	top:40px;
+	display:block;
+	position:absolute;
+	background:rgb(242, 211, 230);
+}
+.menu-bar ul li:hover .sub-menu-1 ul{
+	margin-top:10px;
+	margin-bottom:10px;
+	display:block;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li{
+  width:200px;
+  padding:10p;
+  background:transparent;
+  border-radius:0;
+  text-align:left;
+  margin-bottom:10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+  border-bottom:none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+  padding: 10px 50px;
+  background:#fff;
+  border-radius:30px;
+}
+.logo{
+    float: left;
+    width: 12%;
+	height:12%;
+    margin: -1.5% -3% -2% -2%;/*ثاني واحد قد ايش تبعد الصورة عن المنيو*/
+}
+input[type="search"]{
+    width: auto;
+    padding: 0;
+    margin: 0;
+    border: solid 1px #ccc;
+    font-size: 25px;  
+    border-radius: 10px;
+    text-align: center;
+}
+
+input[type="search"]:hover{
+    border-color: #aaa;
+    clear: both;
+}
+
+.sign-form input[type=text], .sign-form input[type=password], .modal-content input[type=text], .modal-content input[type=password] {
+  width: 80%;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 0.5em;
+  font-family:  'Dancing Script', cursive;
+}
+
+.sign-form input[type=text], .sign-form input[type=password], .modal-content input[type=text], .modal-content input[type=password]:hover{
+     box-shadow: 6px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+/*singin and modal singin*/
+.modal-content, .sign-form {
+  text-align: center;
+  border: 0.063em solid #279F8A;
+  border-radius: 2em;
+  padding: 1em 0 1em 0;
+ 
+}
+
+.sign-form .row, .modal-content .row {
+  line-height: 3;
+}
+.col-3 .button{
+   border-radius: 0.5em;
+   font-size: 20px;
+    margin: 0.5em;
+    padding: 0.1em 0.3em;;
+    font-family:  'Dancing Script', cursive;
+}
+
+/* log in and logout button*/
+.col-3 .button:hover{
+     cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* modal and its animate and close button*/
+
+
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/*modal content*/
+.modal-content {
+  margin: 5% auto 10% auto;
+  width: 30%;
+  background-color: #F8F3EF;
+}
+
+/* The Close Button for modal */
+.close1 {
+  position: absolute;
+  left: 36%;
+  top: 18%;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close1:hover,
+.close1:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0)
+  }
+
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+
+/*انشاء حساب*/
+.form2 {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+.container1 {
+  margin: 5% auto 10% auto;
+    width: 40%;
+  background-color: rgb(253, 250, 250);
+  border-radius: 2em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  max-width: 100%;
+    position: absolute;
+    transform: translate(-50% , -60%);
+    left: 50%;
+    top: 50%;
+  
+}
+
+.header1 {
+  border-bottom: 1px solid #f7f7f7;
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+}
+
+.header1 h2 {
+  margin: 0;
+}
+
+.form1 {
+  padding: 30px 40px;  
+}
+
+.form-control1 {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control1 label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control1 input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-contro1 input:focus {
+  outline: 0;
+  border-color: rgb(96, 79, 104);
+}
+
+.form-control1.success input {
+  border-color: #2ecc71;
+}
+
+.form-control1.error input {
+  border-color: #e74c3c;
+}
+
+.form-control1 i {
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+
+.form-control1.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.form-control1.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.form-control1 small {
+  color: #e74c3c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control1.error small {
+  visibility: visible;
+}
+
+.form1 button {
+  background-color: #ad4467;
+  border: 2px solid #ad4467;
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+
+.closeForm {
+  position: absolute;
+  color: #000;
+  font-size: 200% ;
+  font-weight: bold;
+}
+
+.closeForm:hover,
+.closeForm:focus {
+  color: red;
+  cursor: pointer;
+}
+
+
+
+
+/*advertisin*/
+
+.slider{
+	display:flex;
+	justify-content:up;
+	align-items: center;
+	width:53.25%;
+	margin-left: 25% ;
+	height:600px;/*تصغير حجم النافذة*/
+	overflow:hidden;/*اخفى كل الصور ماعدا الاولى*/
+}
+.slides{
+	width:500%;
+	height:500px;
+	display:flex;
+}
+.slides input{
+	display:none;/*اخفى دوائر الراديو الاصلية*/
+}
+.slide{
+	width:25%;
+	transition:2s;
+}
+.slide img{/*توحيد مقاسات الصور كلها*/
+	border-radius:10px;
+	width:800px;
+	height:500px;
+}
+.navigation-manual{
+	position:absolute;
+	width:800px;
+	margin-top:460px;
+	display:flex;
+	justify-content:center;/*الدوائر تكون نص الشكل*/
+}
+.manual-btn{
+	border:2px solid #8B475E;/* ازارير انشأها عشان اغير على كيفي هما فعلًا ليبل*/
+	padding:5px;
+	border-radius:10px;
+	cursor:pointer;
+	transition:1s;
+	margin-right:40px;/*النقاط الدائرية تكون بعيدة عن بعض*/
+}
+.manual-btn:hover{
+	background:#8B475E;/*لما نمرر الفارة عالدوائر تصير حمراء كلها*/
+}
+#radio1:checked ~ .first{/*عشان تتحرك الصور حسب أول صورة ازيد 20*/
+	margin-left:0;
+}
+#radio2:checked ~ .first{
+	margin-left:-25%;
+}
+#radio3:checked ~ .first{
+	margin-left:-50%;
+}
+#radio4:checked ~ .first{
+	margin-left:-75%;
+}
+.navigation-auto{
+	position:absolute;
+	display: flex;/*بدل ماتكون بالطول تكون بالعرض*/
+	width: 800px;
+	justify-content:center;
+	margin-top:460px;
+}
+
+.navigation-auto div{
+	border:2px solid #8B475E;
+	padding:5px;
+	border-radius:10px;
+	transition:1s;
+	margin-right:40px;/*النقاط الدائرية تكون بعيدة عن بعض*/
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{/*اذا شلت دول وقتها لما تتغير تلقائي محاقدر اعرف من البوتون انا في الصورة الكم*/
+	background:#8B475E;/*اوك اوتوماتيك اذا انا في ليبل معين خلي لون الليبل كلو احمر الدايرة الصغيرة أقصد*/
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+	background:#8B475E;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+	background:#8B475E;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+	background:#8B475E;
+}
+
+
+/*footer*/
+footer{
+	box-sizing:border-box;  
+    background-size:cover;
+    background-position:center;
+    width: 100%;
+  text-align: center;
+  background-color: #CFB5D7;
+   
+}
+
+footer img{
+  margin: 1%;
+}
+
+footer p{
+    margin: 0.5%;
+    font-size: 120%;
+  color:#8B475E;
+}
+
+footer small{
+  color:#8B475E;
+}
+
+
+/*department in main page*/
+.department{
+    width: 90%;
+    padding-left: 5em;
+    
+}
+.department img{
+    border-radius: 10em;
+    margin-bottom: -1em;
+    box-shadow: 5px 5px gray ;
+}
+.department .ro1 p{
+    padding-left: 25%;
+}
+.department .ro2{
+  text-align: right;
+  font-family: "Lucida Console";
+  font-weight: bold;
+}
+
+.department p{
+    font-size: 250%;	
+	font-family:sans-serif;
+}
+
+.department img:hover{
+    color: #1B6F60;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow:
+    0px 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0px 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0px 12.5px 10px rgba(0, 0, 0, 0.06),
+    0px 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0px 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0px 100px 80px rgba(0, 0, 0, 0.12);
+  
+}
+
+.department .ro1{
+  font-family: "Lucida Console";
+  font-weight: bold;
+}
+
+
+/*health*/
+
+
+
+.health{
+	width: 70%;
+	margin-left:10%;
+	padding:2%;
+}
+.health a{
+    padding-left:35%;
+}
+.health img{
+    border-radius: 10em;
+	margin-bottom: -1em;
+    box-shadow: 5px 5px gray ;
+}
+.health p{
+    font-size: 200%;
+	padding-left:55%;
+}
+
+.health img:hover , .col:hover{
+     color: #1B6F60;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow:
+    0px 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0px 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0px 12.5px 10px rgba(0, 0, 0, 0.06),
+    0px 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0px 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0px 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+
+
+/*product Page*/
+
+.content{
+  width:auto;
+  margin-left:11%;
+  display:block;
+  align-items:center;
+  justify-content:space-between;
+}
+.tit{
+    text-align: center;
+	color:#8B475E;
+    font-size: 250%;
+	font-family:sans-serif;
+}
+
+.container{
+  text-align: center;
+   width:100%;
+    height: 100%;
+}
+.container p{
+    font-size: 100%;
+}
+
+.col {
+  border: solid 1px;
+  padding: 1em ; 
+  margin: 2em 1em; 
+  box-shadow: 6px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 1em;
+  border-color:white;
+  line-height: 0.4;
+  background-color: white;
+  width: 250px; }
+
+#cart-button{
+	
+    margin-right: 15em;
+    border-radius: 50%;
+    padding: 0.5em;
+	border-color:white;
+	background-color:#FFEDFE;
+}
+
+#cart-button :hover{
+    cursor:pointer;
+}
+
+.product-block {
+        background: rgba(102, 102, 102, 0.5);
+        width: 100%;
+        height: 223%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+		
+}
+.full-product {
+	position:absolute;
+	z-index:2;
+	background-color:#FDF9F6;
+	width:580px;
+	height:700px;
+	box-shadow: 6px 4px 8px 0px rgba(0, 0, 0, 0.2);
+	border-radius:10px;
+	left:50%;
+	top:30%;
+	transform:translate(-50%,-50%);
+}
+.full-product .close{
+margin-left:101%;
+}
+.full-product  img{
+	max-width:80%;
+}
+.info,
+.star div,
+.cart div{
+	width:100%;
+}
+.full-product .description,
+.full-product {
+	text-align:center;
+}
+.full-product p{
+	margin:10px 0;
+}
+.full-product .more-info{
+	padding:20px 0;
+}
+
+/* book video*/
+
+
+.video-book{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow:  hidden;
+    height: 65vh;
+    margin: 0.3em 0em 3em;
+    
+}
+
+.video-book h1{
+    z-index: 1;
+    font-size: 6em;
+
+   
+}
+.video-container{
+    position: absolute;
+    width: 100%;
+}
+.video-container video{
+    opacity: 0.8;
+    
+}
+
+/*صفحة الدفع والشحن*/
+
+.payment-form{
+    float: left;
+    width: 65%;
+    margin:2%;
+}
+
+input[type="submit"][value="Submit"] {
+    color:#cd87b7;
+    font-size: x-large;
+	font-family:  'Dancing Script', cursive;
+	margin-top: 10px;
+	margin-left: 600px;
+}
+
+input[type="submit"][value="Save"]{
+	 color:#cd87b7;
+    font-size: x-large;
+	font-family:  'Dancing Script', cursive;
+	margin-top: 10px;
+	margin-left: 600px;
+}
+
+legend{font-style: oblique;
+	color: rgb(119, 93, 119);
+	font-size: 35px;
+	font-family:  'Dancing Script', cursive;}
+
+
+
+/*about us page*/
+.about{
+    text-align: center;
+    font-size: 2em;
+    margin: 3em;
+     color: #cd87b7;
+   
+}
+.about img{
+    float: left ;
+    margin-top: -7%;
+    margin-left: -9%;
+}
+
+.about p{
+   color:#8B475E;
+ 
+}
+.developer-team ul{
+       clear: both;
+}
+
+
+/*our team*/
+.develop h1{
+  clear: both;
+  color: #8B475E;
+  text-align: center;
+} 
+
+
+.team{
+    text-align: center;
+}
+.our-team{
+    border-radius: 10%;;
+    text-align: center;
+    background: #fff;
+    display: inline-block;
+    width: 15%;
+    margin: 2% 1.2%;
+    
+}
+
+.our-team .pic{
+    background: #fff;
+    padding: 2%;
+    margin-bottom: 2%;
+    border-radius: 10%;;
+}
+
+
+.our-team:hover {
+        cursor: pointer;
+    	box-shadow: 1px 1px 8px 3px  #cd87b7;
+        font-weight: bolder;
+}
+
+.pic img{
+    width: 100%;
+    height: 30%;
+    border-radius: 50%;
+}
+.our-team .title{
+    font-weight: 600;
+     color: #8B475E;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 0 0 7px 0;
+}
+.our-team .post{
+    color: #cd87b7;
+    text-transform: capitalize;
+    display: block;
+    font-size: 15px;
+    margin-bottom: 2%;;
+}
+.our-team a{
+    margin: 2%;
+}
+
+
+/*card page*/
+
+.cart_page{
+    width: 60%;
+    text-align: center;
+    float: left;
+    margin: 1%;
+    background-color:#FFFBFC;
+ 
+}
+
+.cart_page th{
+    padding: 1em;
+    font-size: 1.2em;
+    border-bottom: solid 3px;
+    border-color:#cd87b7;
+    color:#8B475E;
+}
+
+.cart_page td{
+    line-height: 0.5;
+    padding: 1.5%;
+    border-bottom: solid 1px;
+    Width:2%;
+    
+}
+
+.cart_page img{
+    float: left;
+}
+.cart-info p{
+    padding-top: 25%; 
+    color:#cd87b7;
+    font-size: 1.4em;
+}
+.remove{
+    clear: both;
+    padding: 8%;
+    margin-left: -55%;
+}
+
+
+ a{
+    color: #8B475E;
+    text-decoration-line: none;
+    font-size: 1.2em;
+    }
+
+
+.cart_page select {
+    font-size: 1.2em;
+    font-family:  'Dancing Script', cursive;
+}
+
+.total-price {
+    width: 25%;
+    margin: 5% 0% 0% 70%;
+    padding: 1%;
+    background-color:#FFFBFC;
+    
+}
+
+
+.total-price b{
+    padding-right: 4%;
+    color:#8B475E;
+}
+
+.cart-button {
+    margin-left: 40%;
+    padding: 2%;
+	font-family:  'Dancing Script', cursive;
+    border-radius: 0.5em;
+    font-size: 15px;
+    background-color:  #CFB5D7;
+    
+    
+}
+
+.cart-button:hover{
+    cursor: pointer;
+    font-weight: bold;
+    color: #8B475E;
+}
+
+.cart-footer button{
+    clear: both;
+    padding: 1%;
+     margin-left: 30%;
+     margin-bottom: 2%;
+}
+
+.ab{
+    clear: both;
+}
+
+
+
+/*
+reference:
+
+log in pop
+https://www.w3schools.com/howto/howto_css_modals.asp
+
+product pop
+
+https://puzzleweb.ru/en/css/21_modalnoe_okno.php
+https://www.w3schools.com/howto/howto_js_popup.asp
+
+team developer
+https://www.foolishdeveloper.com/2021/05/responsive-our-team-section-using-html.html?ref=morioh.com&utm_source=morioh.com
+
+main page
+https://www.youtube.com/watch?v=0wvrlOyGlq0&list=LL&index=34
+
+menue drop down
+https://www.youtube.com/watch?v=wHFflWvii3M
+
+
+
+*/
+

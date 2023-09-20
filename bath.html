@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>lisse World</title>
+		<link rel="stylesheet" href="style.css" />
+		
+		<link rel="icon" href="imgs/logo.png">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+		<script defer src="script.js"></script>
+
+	
+	</head>
+	<body>
+		<header>
+			<div class="menu-bar">
+				<img src="imgs/logo.png" width="100px" height="100px" class="logo">
+				<ul>
+					<li><a href="index.html">Home</a>
+					            <div class="sub-menu-1">
+								</div>
+					</li>
+					<li><a href="health.html">Helth</a>
+					            <div class="sub-menu-1">
+									<ul>
+										<li><a href="bath.html">Bath</a></li>
+										<li><a href="food.html">Food</a></li>
+										</ul>
+								</div>
+					</li>
+					<li><a href="toys.html">Toys</a>
+					            <div class="sub-menu-1">
+									<ul>
+										<li><a href="books.html">Books</a></li>
+									</ul>
+								</div>          
+					</li>				
+					<li><a href="safty.html">Safty</a>
+								<div class="sub-menu-1">
+									<ul>
+										<li><a href="gear.html">Baby Gear</a></li>
+									</ul>
+								</div>          					
+					</li>				
+					<li><a href="clothes.html">Colthes</a>
+								<div class="sub-menu-1">
+									<ul>
+										<li><a href="shoes.html">Shoes</a></li>
+										<li><a href="gift.html">Gifts</a></li>
+									</ul>
+								</div>					
+					</li>	
+                    <li><a href="aboutus.html">About Us</a>
+					<li><input type="search" placeholder="search"></li>
+						<li><a href="card.html" ><img src="imgs/basket.png" height="30px"  width="30px"></a></li>
+					<li><a href="#" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-fw fa-user"> </i> <img src="imgs/user.png" height="30px" width="30px" >  </a> </li>
+				</ul>
+			</div>
+		</header>
+
+	
+        <div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close1" title="Close Modal">&times;</span>
+
+    <div class="modal-content animate">
+	
+      <form id="signin" action="index.html" method="post">
+        <img src="imgs/user.png" width="100" height="100">
+        <div class="row">
+          <div class="col-1">
+            <label for="user_name"> user name</label>
+            <span id="massege" style="color:red; font-size:0.8em;"></span>
+          </div>
+          <div class="col-2">
+            <input type="text" id="user_name" name="user_name" placeholder="enter user name " min="3" size="10" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <label for="pasword"> Password</label>
+          </div>
+          <div class="col-2">
+            <input type="password" id="password" name="password" placeholder="enter the password" min="8" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1">
+            <input type="checkbox" name="remember" value="true" checked>
+            <label for="remember">remember me</label>
+               
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-3">
+            <a href="#" onclick="openForm10()" ><button class="button" type="button" name="button">sign up </button></a>
+            <input class="button" type="submit" value="sign in ">
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+  <div class="form2" id = "form2">
+  <div class="container1" id ="container1" >
+	<span class = "closeForm"onclick="closeForm10()">&times;</span>
+	<div class="header1">
+		 <h2>Create Account</h2>
+	</div>
+
+	<form id="form1" class="form1" action="index.html" method="post">
+
+		 <div class="form-control1">
+			  <label for="username">Username</label>
+			  <input type="text" placeholder="write full name" id="username" required />
+			  <small>Error message</small>
+		 </div>
+		 <div class="form-control1">
+			  <label for="username">Email</label>
+			  <input type="email" placeholder="examble@hotmail.com" id="email" required />
+			  <small>Error message</small>
+		 </div>
+		 <div class="form-control1">
+			  <label for="username">Password</label>
+			  <input type="password" placeholder="Password" id="password2" required />
+			  <small>Error message</small>
+		 </div>
+		 <div class="form-control1">
+			  <label for="username">Password check</label>
+			  <input type="password" placeholder="Check password" id="checkpassword"required />
+			  <small>Error message</small>
+		 </div>
+		<a href="index.html"> <button class="button" type="submit" name="button">Submit</button></a>
+		 
+
+	</form>
+</div> 
+</div>
+        
+        
+		<h1 class="tit"> Bath </h1>
+		<div class="content">
+			<table class="container">
+				<tr class="ro1">
+					<td>
+						<div class="col" onclick="details()">
+							<a href="#" onclick="openForm1()" >
+								<img src="imgs/Johnson Baby.jpg" width="200px" alt="Yogis,Strawberry">
+							</a>
+							<div class="details">
+								<h3> Johnson Baby Bath</h3>
+								<p>1-3</p>
+								<b>48.45 SAR</b>
+								<button class ="button"id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+                            </div>
+                        </div>
+						<!--full product-->
+						<div class="product-block" id="product-block1">
+							<div class="full-product"  id="full-product">
+								<a href="#"  class="close" onclick="closeForm1()"> <img src="imgs/close.png" height="30px"  width="30px"></a>
+								<div class="info">				
+									<img src="imgs/Johnson Baby.jpg" width="300px" alt="Yogis,Strawberry">
+									<div class="description">
+										<h3 class="subtitle">Johnson Baby Bath</h3>
+										<p>1-3</p>
+										<b class="price">48.45 SAR</b>
+									</div>
+								</div>
+								<div class="star">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/half star.png" height="30px" width="30px">
+								<div class="review">
+									124 reviews <img src="imgs/arrow1.png" height="15px" width="15px">
+								</div>
+								</div>
+								<div class="more-info">
+									<p>JOHNSON’S Baby Bath 500ml </p>
+								</div>
+								<button class ="button"id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>		  
+		  
+					</td>
+					<td>
+						<div class="col" onclick="details()">
+							<a href="#" onclick="openForm2()" >
+								<img src="imgs/Johnson Baby oil.jpg" width="200px" alt="Gerber, Lil' Crunchies">
+							</a>						
+							<div class="details">
+								<h3>Johnson Baby oil</h3>
+								<p>1-3</p>
+								<b>34.05 SAR</b>
+								<button id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>
+						<!--full product-->
+						<div class="product-block" id="product-block2">
+							<div class="full-product"  id="full-product">
+								<a href="#"  class="close" onclick="closeForm2()"> <img src="imgs/close.png" height="30px"  width="30px"></a>
+								<div class="info">				
+									<img src="imgs/Johnson Baby oil.jpg" width="300px" alt="Yogis,Strawberry">
+									<div class="description">
+										<h3 class="subtitle">Johnson Baby oil</h3>
+										<p>1-3</p>
+										<b class="price">34.05 SAR</b>
+									</div>
+								</div>
+								<div class="star">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+								<div class="review">
+									154 reviews <img src="imgs/arrow1.png" height="15px" width="15px">
+								</div>
+								</div>
+								<div class="more-info">
+									<p>JOHNSON’S Baby Oil 200ml</p>
+								</div>
+								<button class ="button"id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>						
+					</td>
+					<td>
+						<div class="col">
+							<a href="#" onclick="openForm3()" >
+								<img src="imgs/Johnson Baby powder.jpg" width="200px" alt="Superfood Puffs">
+							</a>						
+							<div class="details">
+								<h3>Johnson Baby powder </h3>
+								<p>0-3</p>
+								<b>17.58 SAR</b>
+								<button id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>
+						<!--full product-->
+						<div class="product-block" id="product-block3">
+							<div class="full-product"  id="full-product">
+								<a href="#"  class="close" onclick="closeForm3()"> <img src="imgs/close.png" height="30px"  width="30px"></a>
+								<div class="info">				
+									<img src="imgs/Johnson Baby powder.jpg" width="300px" alt="Yogis,Strawberry">
+									<div class="description">
+										<h3 class="subtitle">Johnson Baby powder</h3>
+										<p>0-3</p>
+										<b class="price">16.05 SAR</b>
+									</div>
+								</div>
+								<div class="star">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+								<div class="review">
+									254 reviews <img src="imgs/arrow1.png" height="15px" width="15px">
+								</div>
+								</div>
+								<div class="more-info">
+									<p>JOHNSON’S Baby Powder 100g </p>
+								</div>
+								<button class ="button"id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>						
+					</td>
+               </tr>
+				<tr class="ro2">
+					<td>
+						<div class="col">
+							<a href="#" onclick="openForm4()" >
+								<img src="imgs/Johnson Baby petroleum Jelly.jpg" width="200px" alt="Toddler Mum-Mum">
+							</a>						
+							<div class="details">
+								<h3> Johnson Baby Jelly</h3>
+								<p>2-3</p>
+								<b>17.50 SAR</b>
+								<button id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>
+						<!--full product-->
+						<div class="product-block" id="product-block4">
+							<div class="full-product"  id="full-product">
+								<a href="#"  class="close" onclick="closeForm4()"> <img src="imgs/close.png" height="30px"  width="30px"></a>
+								<div class="info">				
+									<img src="imgs/Johnson Baby petroleum Jelly.jpg" width="300px" alt="Yogis,Strawberry">
+									<div class="description">
+										<h3 class="subtitle"> Johnson Baby Jelly</h3>
+										<p>2-3</p>
+										<b class="price">17.50 SAR</b>
+									</div>
+								</div>
+								<div class="star">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/half star.png" height="30px" width="30px">
+								<div class="review">
+									234 reviews <img src="imgs/arrow1.png" height="15px" width="15px">
+								</div>
+								</div>
+								<div class="more-info">
+									<p>JOHNSON’S Baby Jelly Fragrance Free 250ml</p>
+								</div>
+								<button class ="button"id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>						
+					</td>
+					<td>
+						<div class="col">
+							<a href="#" onclick="openForm5()" >
+								<img src="imgs/johnson Baby Soap.jpg" width="200px" alt="Teensy Soft Fruits Snacks">
+							</a>						
+							<div class="details">
+								<h3>johnson Baby Soap</h3>
+								<p>1-3</p>
+								<b>8.40 SAR</b>
+								<button id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>
+						<!--full product-->
+						<div class="product-block" id="product-block5">
+							<div class="full-product"  id="full-product">
+								<a href="#"  class="close" onclick="closeForm5()"> <img src="imgs/close.png" height="30px"  width="30px"></a>
+								<div class="info">				
+									<img src="imgs/johnson Baby Soap.jpg" width="300px" alt="Yogis,Strawberry">
+									<div class="description">
+										<h3 class="subtitle">johnson Baby Soap</h3>
+										<p>1-3</p>
+										<b class="price">8.40 SAR</b>
+									</div>
+								</div>
+								<div class="star">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/half star.png" height="30px" width="30px">
+									<img src="imgs/empty.png" height="30px" width="30px">
+								<div class="review">
+									324 reviews <img src="imgs/arrow1.png" height="15px" width="15px">
+								</div>
+								</div>
+								<div class="more-info">
+									<p>JOHNSON’S Baby Soap 125g </p>
+								</div>
+								<button class ="button"id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>						
+					</td>
+					<td>
+						<div class="col">
+							<a href="#" onclick="openForm6()" >
+								<img src="imgs/Cetaphil baby wash & Shampoo.jpg" width="200px" alt="Organic Creamies">
+							</a>						
+							<div class="details">
+								<h3>baby wash & Shampoo</h3>
+								<p>2-3</p>
+								<b>86.25 SAR</b>
+								<button id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div> 
+						</div>
+						<!--full product-->
+						<div class="product-block" id="product-block6">
+							<div class="full-product"  id="full-product">
+								<a href="#"  class="close" onclick="closeForm6()"> <img src="imgs/close.png" height="30px"  width="30px"></a>
+								<div class="info">				
+									<img src="imgs/Cetaphil baby wash & Shampoo.jpg" width="300px" alt="Yogis,Strawberry">
+									<div class="description">
+										<h3 class="subtitle">baby wash & Shampoo</h3>
+										<p>2-3</p>
+										<b class="price">86.25 SAR</b>
+									</div>
+								</div>
+								<div class="star">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/half star.png" height="30px" width="30px">
+								<div class="review">
+									276 reviews <img src="imgs/arrow1.png" height="15px" width="15px">
+								</div>
+								</div>
+								<div class="more-info">
+									<p>Cetaphil baby wash & Shampoo with organic Calendula 400 ml </p>
+								</div>
+								<button class ="button"id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>							
+					</td>
+				</tr>
+				<tr class="ro3">
+					<td>
+						<div class="col">
+							<a href="#" onclick="openForm7()" >
+								<img src="imgs/Johnson Baby soft lotion.jpg" width="200px" alt="Organics Happy Tot">
+							</a>						
+							<div class="details">
+								<h3> Johnson Baby lotion</h3>
+								<p>1-3</p>
+								<b >33.95 SAR</b>
+								<button id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>
+						<!--full product-->
+						<div class="product-block" id="product-block7">
+							<div class="full-product"  id="full-product">
+								<a href="#"  class="close" onclick="closeForm7()"> <img src="imgs/close.png" height="30px"  width="30px"></a>
+								<div class="info">				
+									<img src="imgs/Johnson Baby soft lotion.jpg" width="300px" alt="Yogis,Strawberry">
+									<div class="description">
+										<h3 class="subtitle"> Johnson Baby lotion</h3>
+										<p>1-3</p>
+										<b class="price">33.95 SAR</b>
+									</div>
+								</div>
+								<div class="star">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/half star.png" height="30px" width="30px">
+								<div class="review">
+									276 reviews <img src="imgs/arrow1.png" height="15px" width="15px">
+								</div>
+								</div>
+								<div class="more-info">
+									<p>JOHNSON’S Baby Soft Lotion 200ml</p>
+								</div>
+								<button class ="button"id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>						
+					</td>
+					<td>
+						<div class="col">
+							<a href="#" onclick="openForm8()" >
+								<img src="imgs/Playgro Towel Bunny Pink.jpg" width="200px" alt="Jammy Sammy">
+							</a>						
+							<div class="details">
+								<h3>Playgro Towel Bunny</h3>
+								<p>1-3</p>
+								<b>90.85 SAR</b>
+								<button id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>
+						<!--full product-->
+						<div class="product-block" id="product-block8">
+							<div class="full-product"  id="full-product">
+								<a href="#"  class="close" onclick="closeForm8()"> <img src="imgs/close.png" height="30px"  width="30px"></a>
+								<div class="info">				
+									<img src="imgs/Playgro Towel Bunny Pink.jpg" width="300px" alt="Yogis,Strawberry">
+									<div class="description">
+										<h3 class="subtitle">Playgro Towel Bunny</h3>
+										<p>1-3</p>
+										<b class="price">90.85 SAR</b>
+									</div>
+								</div>
+								<div class="star">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/half star.png" height="30px" width="30px">
+								<div class="review">
+									212 reviews <img src="imgs/arrow1.png" height="15px" width="15px">
+								</div>
+								</div>
+								<div class="more-info">
+									<p>Playgro Home Hooded Towel Bunny Pink</p>
+								</div>
+								<button class ="button"id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>							
+					</td>
+					<td>
+						<div class="col">
+							<a href="#" onclick="openForm9()" >
+								<img src="imgs/Canpol Hairbrush And Comb Set.jpg" width="200px" alt="Sprout Organic, Wafflez">
+							</a>						
+							<div class="details">
+								<h3>Canpol Hairbrush</h3>
+								<p>1-3</p>
+								<b>36.80 SAR</b>
+								<button id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>
+						<!--full product-->
+						<div class="product-block" id="product-block9">
+							<div class="full-product"  id="full-product">
+								<a href="#"  class="close" onclick="closeForm9()"> <img src="imgs/close.png" height="30px"  width="30px"></a>
+								<div class="info">				
+									<img src="imgs/Canpol Hairbrush And Comb Set.jpg" width="300px" alt="Yogis,Strawberry">
+									<div class="description">
+										<h3 class="subtitle">Canpol Hairbrush</h3>
+										<p>1-3</p>
+										<b class="price">36.80 SAR</b>
+									</div>
+								</div>
+								<div class="star">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/half star.png" height="30px" width="30px">
+								<div class="review">
+									244 reviews <img src="imgs/arrow1.png" height="15px" width="15px">
+								</div>
+								</div>
+								<div class="more-info">
+									<p>Canpol Hairbrush And Comb Set</p>
+								</div>
+								<button class ="button"id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>							
+					</td>
+				</tr>
+
+			</table>
+		</div>	
+         
+		<footer>
+			<p>contact with us</p>
+			<a href=""> <img src="imgs/s.png" width="20px" height="20px" ></a>
+			<a href="https://www.instagram.com/lisse.world/" target="_blank">  <img src="imgs/i.png" width="20px" height="20px" ></a>
+			<a href="https://twitter.com/lisseworld?s=11" target="_blank"><img src="imgs/t.png" width="20px" height="20px" ></a>
+            <a href=""> <img src="imgs/w.png" "20px" height="20px" ></a> <br />
+			<small> copyright &copy; lisseworld KSA 2021</small><br> <br />
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>lisse World</title>
+		<link rel="stylesheet" href="style.css" />
+		
+		<link rel="icon" href="imgs/logo.png">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+		<script defer src="script.js"></script>
+
+	
+	</head>
+	<body>
+		<header>
+			<div class="menu-bar">
+				<img src="imgs/logo.png" width="100px" height="100px" class="logo">
+				<ul>
+					<li><a href="index.html">Home</a>
+					            <div class="sub-menu-1">
+								</div>
+					</li>
+					<li><a href="health.html">Helth</a>
+					            <div class="sub-menu-1">
+									<ul>
+										<li><a href="bath.html">Bath</a></li>
+										<li><a href="food.html">Food</a></li>
+										</ul>
+								</div>
+					</li>
+					<li><a href="toys.html">Toys</a>
+					            <div class="sub-menu-1">
+									<ul>
+										<li><a href="books.html">Books</a></li>
+									</ul>
+								</div>          
+					</li>				
+					<li><a href="safty.html">Safty</a>
+								<div class="sub-menu-1">
+									<ul>
+										<li><a href="gear.html">Baby Gear</a></li>
+									</ul>
+								</div>          					
+					</li>				
+					<li><a href="clothes.html">Colthes</a>
+								<div class="sub-menu-1">
+									<ul>
+										<li><a href="shoes.html">Shoes</a></li>
+										<li><a href="gift.html">Gifts</a></li>
+									</ul>
+								</div>					
+					</li>	
+                    <li><a href="aboutus.html">About Us</a>
+					<li><input type="search" placeholder="search"></li>
+						<li><a href="card.html" ><img src="imgs/basket.png" height="30px"  width="30px"></a></li>
+					<li><a href="#" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-fw fa-user"> </i> <img src="imgs/user.png" height="30px" width="30px" >  </a> </li>
+				</ul>
+			</div>
+		</header>
+
+	
+        <div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close1" title="Close Modal">&times;</span>
+
+    <div class="modal-content animate">
+	
+      <form id="signin" action="index.html" method="post">
+        <img src="imgs/user.png" width="100" height="100">
+        <div class="row">
+          <div class="col-1">
+            <label for="user_name"> user name</label>
+            <span id="massege" style="color:red; font-size:0.8em;"></span>
+          </div>
+          <div class="col-2">
+            <input type="text" id="user_name" name="user_name" placeholder="enter user name " min="3" size="10" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <label for="pasword"> Password</label>
+          </div>
+          <div class="col-2">
+            <input type="password" id="password" name="password" placeholder="enter the password" min="8" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1">
+            <input type="checkbox" name="remember" value="true" checked>
+            <label for="remember">remember me</label>
+               
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-3">
+            <a href="#" onclick="openForm10()" ><button class="button" type="button" name="button">sign up </button></a>
+            <input class="button" type="submit" value="sign in ">
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+  <div class="form2" id = "form2">
+  <div class="container1" id ="container1" >
+	<span class = "closeForm"onclick="closeForm10()">&times;</span>
+	<div class="header1">
+		 <h2>Create Account</h2>
+	</div>
+
+	<form id="form1" class="form1" action="index.html" method="post">
+
+		 <div class="form-control1">
+			  <label for="username">Username</label>
+			  <input type="text" placeholder="write full name" id="username" required />
+			  <small>Error message</small>
+		 </div>
+		 <div class="form-control1">
+			  <label for="username">Email</label>
+			  <input type="email" placeholder="examble@hotmail.com" id="email" required />
+			  <small>Error message</small>
+		 </div>
+		 <div class="form-control1">
+			  <label for="username">Password</label>
+			  <input type="password" placeholder="Password" id="password2" required />
+			  <small>Error message</small>
+		 </div>
+		 <div class="form-control1">
+			  <label for="username">Password check</label>
+			  <input type="password" placeholder="Check password" id="checkpassword"required />
+			  <small>Error message</small>
+		 </div>
+		<a href="index.html"> <button class="button" type="submit" name="button">Submit</button></a>
+		 
+
+	</form>
+</div> 
+</div>
+        
+        
+       <div class="video-book"> 
+		<h1> BOOKS </h1>
+          <div class="video-container" >
+              <video  src="bookvid.mp4" type="video/mp4" autoplay muted loop width="100%" >  </video>
+           </div> 
+           </div>
+            
+		<div class="content">
+			<table class="container">
+				<tr class="ro1">
+					<td>
+						<div class="col">
+							<a href="#" onclick="openForm1()" >
+								<img src="imgs/minibook.jpg" width="200px" alt="Me Reader">
+							</a>
+							<div class="details">
+								 <h3> Me Reader</h3>
+                                  <p>1-3</p>
+                                  <b>159.00 SAR</b>
+								<button class ="button"id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+                            </div>
+                        </div>
+						<!--full product-->
+						<div class="product-block" id="product-block1">
+							<div class="full-product"  id="full-product">
+								<a href="#"  class="close" onclick="closeForm1()"> <img src="imgs/close.png" height="30px"  width="30px"></a>
+								<div class="info">				
+									<img src="imgs/minibook.jpg" width="300px" alt="Me Reader">
+									<div class="description">
+										<h3 class="subtitle">Me Reader</h3>
+										<p>1-3</p>
+										<b class="price">159.00 SAR</b>
+									</div>
+								</div>
+								<div class="star">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/half star.png" height="30px" width="30px">
+								<div class="review">
+									12 reviews <img src="imgs/arrow1.png" height="15px" width="15px">
+								</div>
+								</div>
+								<div class="more-info">
+									<p>Story series<br> 
+									great and intersting storys for young kids help them to love reading</p>
+								</div>
+								<button class ="button"id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>		  
+		  
+					</td>
+					<td>
+						<div class="col">
+							<a href="#" onclick="openForm2()" >
+								 <img src="imgs/dora.jpg" width="200px" alt="dora is book">
+							</a>						
+							<div class="details">
+								  <h3> Dora explorer</h3>
+                                    <p>2-3</p>
+                                    <b>45.05 SAR</b>
+								<button id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>
+						<!--full product-->
+						<div class="product-block" id="product-block2">
+							<div class="full-product"  id="full-product">
+								<a href="#"  class="close" onclick="closeForm2()"> <img src="imgs/close.png" height="30px"  width="30px"></a>
+								<div class="info">				
+									<img src= "imgs/dora.jpg" width="300px" alt="dora is book">
+									<div class="description">
+										<h3 class="subtitle"> Dora explorer</h3>
+										<p>2-3</p>
+										<b class="price">45.05 SAR</b>
+									</div>
+								</div>
+								<div class="star">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+                                    <img src="imgs/star.png" height="30px" width="30px">
+								<div class="review">
+									154 reviews <img src="imgs/arrow1.png" height="15px" width="15px">
+								</div>
+								</div>
+								<div class="more-info">
+									<p>funny And WonderFul Book For Kids All Kids love dora</p>
+								</div>
+								<button class ="button"id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>						
+					</td>
+					<td>
+						<div class="col">
+							<a href="#" onclick="openForm3()" >
+								<img src="imgs/hugbook.jpg" width="200px" alt="Hug">
+							</a>						
+							<div class="details">
+								<h3> Hug </h3>
+                                <p>1-3</p>
+                                <b>32.99 SAR</b>
+								<button id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>
+						<!--full product-->
+						<div class="product-block" id="product-block3">
+							<div class="full-product"  id="full-product">
+								<a href="#"  class="close" onclick="closeForm3()"> <img src="imgs/close.png" height="30px"  width="30px"></a>
+								<div class="info">				
+									<img src="imgs/hugbook.jpg" width="300px" alt="Hug">
+									<div class="description">
+										<h3 class="subtitle"> Hug</h3>
+										<p>1-3</p>
+										<b class="price">32.99 SAR</b>
+									</div>
+								</div>
+								<div class="star">
+									<img src="imgs/star.png" height="30px" width="30px">
+                                    <img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/half star.png" height="30px" width="30px">
+									<img src="imgs/empty.png" height="30px" width="30px">
+                                    <img src="imgs/empty.png" height="30px" width="30px">
+								<div class="review">
+									54 reviews <img src="imgs/arrow1.png" height="15px" width="15px">
+								</div>
+								</div>
+								<div class="more-info">
+									<p>book to teach the kids feelings and love </p>
+								</div>
+								<button class ="button"id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>						
+					</td>
+               </tr>
+				<tr class="ro2">
+					<td>
+						<div class="col">
+							<a href="#" onclick="openForm4()" >
+								<img src="imgs/countbook.jpg" width="200px" alt="lets learn counting">
+							</a>						
+							<div class="details">
+								<h3> Lets Learn Counting</h3>
+                                <p>2-3</p>
+                                <b>19.99 SAR</b>
+								<button id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>
+						<!--full product-->
+						<div class="product-block" id="product-block4">
+							<div class="full-product"  id="full-product">
+								<a href="#"  class="close" onclick="closeForm4()"> <img src="imgs/close.png" height="30px"  width="30px"></a>
+								<div class="info">				
+									<img src="imgs/countbook.jpg" width="300px" alt="lets learn counting">
+									<div class="description">
+										<h3 class="subtitle">Lets Learn Counting</h3>
+										<p>2-3</p>
+										<b class="price">19.51 SAR</b>
+									</div>
+								</div>
+								<div class="star">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+                                    <img src="imgs/star.png" height="30px" width="30px">
+								<div class="review">
+									234 reviews <img src="imgs/arrow1.png" height="15px" width="15px">
+								</div>
+								</div>
+								<div class="more-info">
+									<p>the perfect book to teach the kids counting from 1 to 100</p>
+								</div>
+								<button class ="button"id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>						
+					</td>
+					<td>
+						<div class="col">
+							<a href="#" onclick="openForm5()" >
+								<img src="imgs/animalbook.jpg" width="200px" alt="farm Animal">
+							</a>						
+							<div class="details">
+								 <h3> Farm Animal</h3>
+                                <p>1-3</p>
+                                <b>45.88 SAR</b>
+								<button id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>
+						<!--full product-->
+						<div class="product-block" id="product-block5">
+							<div class="full-product"  id="full-product">
+								<a href="#"  class="close" onclick="closeForm5()"> <img src="imgs/close.png" height="30px"  width="30px"></a>
+								<div class="info">				
+									<img src="imgs/animalbook.jpg" width="300px" alt="farm Animal">
+									<div class="description">
+										<h3 class="subtitle"> Farm Animal</h3>
+										<p>1-3</p>
+										<b class="price">54.62 SAR</b>
+									</div>
+								</div>
+								<div class="star">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/half star.png" height="30px" width="30px">
+									<img src="imgs/empty.png" height="30px" width="30px">
+								<div class="review">
+									324 reviews <img src="imgs/arrow1.png" height="15px" width="15px">
+								</div>
+								</div>
+								<div class="more-info">
+									<p>series books <br>teaching kids all information about animals and farm's life</p>
+								</div>
+								<button class ="button"id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>						
+					</td>
+					<td>
+						<div class="col">
+							<a href="#" onclick="openForm6()" >
+								<img src="imgs/Touchbook.jpg" width="200px" alt="Touch">
+							</a>						
+							<div class="details">
+								<h3> Touch</h3>
+                                        <p>2-3</p>
+                                        <b>49.05 SAR</b>
+								<button id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div> 
+						</div>
+						<!--full product-->
+						<div class="product-block" id="product-block6">
+							<div class="full-product"  id="full-product">
+								<a href="#"  class="close" onclick="closeForm6()"> <img src="imgs/close.png" height="30px"  width="30px"></a>
+								<div class="info">				
+									<img src="imgs/Touchbook.jpg" width="300px" alt="Touch">
+									<div class="description">
+										<h3 class="subtitle"> Touch</h3>
+										<p>2-3</p>
+										<b class="price">49.05 SAR</b>
+									</div>
+								</div>
+								<div class="star">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/half star.png" height="30px" width="30px">
+								<div class="review">
+									276 reviews <img src="imgs/arrow1.png" height="15px" width="15px">
+								</div>
+								</div>
+								<div class="more-info">
+									<p>story of Happy animals live togther and love each other <br>
+                                    then they face problem and try to solve , all these details teach the kid some ethics and life lessons
+                                    </p>
+								</div>
+								<button class ="button"id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>							
+					</td>
+				</tr>
+				<tr class="ro3">
+					<td>
+						<div class="col">
+							<a href="#" onclick="openForm7()" >
+							<img src="imgs/abc.jpg" width="200px" alt="ABC">
+                            </a>
+                            <div class="details">
+                                <h3> ABC</h3>
+                                <p>3</p>
+                                <b >12.67 SAR</b>
+								<button id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>
+						<!--full product-->
+						<div class="product-block" id="product-block7">
+							<div class="full-product"  id="full-product">
+								<a href="#"  class="close" onclick="closeForm7()"> <img src="imgs/close.png" height="30px"  width="30px"></a>
+								<div class="info">				
+									<img src="imgs/abc.jpg" width="300px" alt="ABC">
+									<div class="description">
+										<h3 class="subtitle">ABC</h3>
+										<p>3</p>
+										<b class="price">12.29 SAR</b>
+									</div>
+								</div>
+								<div class="star">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/half star.png" height="30px" width="30px">
+								<div class="review">
+									276 reviews <img src="imgs/arrow1.png" height="15px" width="15px">
+								</div>
+								</div>
+								<div class="more-info">
+									<p>story of Happy animals live togther and love each other <br>
+                                    then they face problem and try to solve , all these details teach the kid some ethics and life lessons
+                                    </p>
+								</div>
+								<button class ="button"id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>						
+					</td>
+					<td>
+						<div class="col">
+							<a href="#" onclick="openForm8()" >
+							<img src="imgs/memories.jpg" width="200px" alt="Baby's First Year">
+                            </a>
+                            <div class="details">
+                                <h3> Baby's First Year</h3>
+                                <p>0-1</p>
+                                <b>39.99 SAR</b>
+								<button id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>
+						<!--full product-->
+						<div class="product-block" id="product-block8">
+							<div class="full-product"  id="full-product">
+								<a href="#"  class="close" onclick="closeForm8()"> <img src="imgs/close.png" height="30px"  width="30px"></a>
+								<div class="info">				
+									<img src="imgs/memories.jpg" width="200px" alt="Baby's First Year">
+									<div class="description">
+										<h3 class="subtitle">Baby's First Year</h3>
+										<p>0-1</p>
+										<b class="price">39.99 SAR</b>
+									</div>
+								</div>
+								<div class="star">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/half star.png" height="30px" width="30px">
+								<div class="review">
+									212 reviews <img src="imgs/arrow1.png" height="15px" width="15px">
+								</div>
+								</div>
+								<div class="more-info">
+									<p>story of Happy animals live togther and love each other <br>
+                                    then they face problem and try to solve , all these details teach the kid some ethics and life lessons
+                                    </p>
+								</div>
+								<button class ="button"id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>							
+					</td>
+					<td>
+						<div class="col">
+							<a href="#" onclick="openForm9()" >
+				                <img src="imgs/healthbook.jpg" width="200px" alt="Baby and Child Healthcare">
+                            </a>
+                            <div class="details">
+                                <h3>Health care</h3>
+                                <p>mothers</p>
+                                <b>40.05 SAR</b>
+								<button id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>
+						<!--full product-->
+						<div class="product-block" id="product-block9">
+							<div class="full-product"  id="full-product">
+								<a href="#"  class="close" onclick="closeForm9()"> <img src="imgs/close.png" height="30px"  width="30px"></a>
+								<div class="info">				
+									<img src="imgs/healthbook.jpg" width="300px" alt="Baby and Child Healthcare">
+									<div class="description">
+										<h3 class="subtitle">Health care</h3>
+										<p>mothers</p>
+										<b class="price">40.05 SAR</b>
+									</div>
+								</div>
+								<div class="star">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/star.png" height="30px" width="30px">
+									<img src="imgs/half star.png" height="30px" width="30px">
+								<div class="review">
+									244 reviews <img src="imgs/arrow1.png" height="15px" width="15px">
+								</div>
+								</div>
+								<div class="more-info">
+									<p>all new mothers need to this helpful book to learn the perfect way to care about their kids
+                                    </p>
+								</div>
+								<button class ="button"id="cart-button"> <img id="add-cart" src="imgs/basket.png" width="40px" height="40px" alt="cart"></button>
+							</div>
+						</div>							
+					</td>
+				</tr>
+
+			</table>
+		</div>	
+		 
+		<footer>
+			<p>contact with us</p>
+			<a href=""> <img src="imgs/s.png" width="20px" height="20px" ></a>
+			<a href="https://www.instagram.com/lisse.world/" target="_blank">  <img src="imgs/i.png" width="20px" height="20px" ></a>
+			<a href="https://twitter.com/lisseworld?s=11" target="_blank"><img src="imgs/t.png" width="20px" height="20px" ></a>
+            <a href=""> <img src="imgs/w.png" "20px" height="20px" ></a> <br />
+			<small> copyright &copy; lisseworld KSA 2021</small><br> <br />
+		</footer>
+	</body> 
+</html>		
